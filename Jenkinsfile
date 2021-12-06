@@ -7,9 +7,9 @@ pipeline{
              git 'https://github.com/jabedhasan21/java-hello-world-with-maven.git'
          }   
         }
-    stage('build'){
+    stage('input'){
          steps{
-            sh 'mvn clean install'
+            input('do you want proceed?')
          }   
         }
         }
