@@ -1,13 +1,14 @@
 pipeline{
     agent any 
    parameters {
-    gitParameter (branchFilter: 'origin/(.*)', defaultValue: 'master', name: 'BRANCH', type: 'PT_BRANCH')
+    
+       string(name: "omircon")
   }
     stages{
         stage('clone'){
                      
          steps{
-               echo "${params.branchFilter}"
+               echo "${params.name}"
          }
 
          }
