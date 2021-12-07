@@ -3,10 +3,13 @@ pipeline{
    
     stages{
         stage('clone'){
-            
-           
+                     
          steps{
-              build 'test-jb'
+               git url: https://github.com/bmk3263/jenkins-pipeline-test.git
+               def v = version()
+                   if (v) {
+                       echo "Building version ${v}"   
+                   }
 
          }
         }       }
