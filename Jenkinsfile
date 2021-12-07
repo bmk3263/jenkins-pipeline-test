@@ -2,14 +2,9 @@ pipeline{
     agent any 
    
     stages{
-        stage('clone'){
+        stage('build-1'){
          steps{
-             git 'https://github.com/jabedhasan21/java-hello-world-with-maven.git'
-         }   
-        }
-    stage('input'){
-         steps{
-            input('do you want proceed?')
+             echo 'jenkins-2 branch and build-1'
          }   
         }
         }
