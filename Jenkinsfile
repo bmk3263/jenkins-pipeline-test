@@ -2,9 +2,9 @@ pipeline{
     agent any 
    
     stages{
-        stage('build-1'){
+        stage('build-2'){
          steps{
-             echo 'jenkins-2 branch and build-1'
+             echo 'jenkins-3 branch and build-3'
          }   
         }
         }
