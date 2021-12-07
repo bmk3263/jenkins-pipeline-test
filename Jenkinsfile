@@ -2,13 +2,13 @@ pipeline{
     agent any 
    parameters {
     
-       string(name: "omircon")
+       string(name: "TEST_STRING", defaultValue: "ssbostan", trim: true, description: "Sample string parameter")
   }
     stages{
         stage('clone'){
                      
          steps{
-               echo "${params.name}"
+               echo "${params.TEST_STRING}"
          }
 
          }
