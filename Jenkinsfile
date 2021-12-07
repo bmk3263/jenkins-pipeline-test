@@ -10,7 +10,10 @@ pipeline{
                    if (v) {
                        echo "Building version ${v}"   
                    }
+         }
 
          }
-        }       }
+        
+        
+      }
 }
