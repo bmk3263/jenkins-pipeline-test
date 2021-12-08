@@ -1,18 +1,16 @@
-pipeline{
-    agent any 
-   parameters {
-    
-       string(name: "TEST_STRING", defaultValue: "ssbostan", trim: true, description: "Sample string parameter")
-  }
-    stages{
-        stage('clone'){
-                     
-         steps{
-               echo "${params.TEST_STRING}"
-         }
-
-         }
-        
-        
-      }
+pipeline {
+    agent {
+        docker {
+                      
+            image 'node:14-alpine'
+            label 'docker-master'
+        }
+    }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
 }
