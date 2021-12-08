@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker-master {
+        docker {
                       
             image 'node:14-alpine'
             label 'docker-master'
